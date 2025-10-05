@@ -1,4 +1,4 @@
-## Emotional Text-To-Speech Based on Mutual-Information-Guided Emotion-Timbre Disentanglement.
+## Emotional Text-To-Speech Based on Mutual-Information-Guided Emotion-Timbre Disentanglement
 ### Introduction
 Implementation for our recent [paper](https://www.arxiv.org/abs/2510.01722).
 
