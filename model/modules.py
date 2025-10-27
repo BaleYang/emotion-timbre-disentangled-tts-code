@@ -494,7 +494,7 @@ class MultiHeadAttention(nn.Module):
         values = torch.stack(torch.split(values, split_size, dim=2), dim=0)  # [h, B, T_k, num_units/h]
 
         scores = torch.matmul(querys, keys.transpose(2, 3))  # [h, B, T_q, T_k]
-        scores = scores / (self.key_dim ** 0.5)
+        scores = scores / ((self.key_dim /self.num_heads) ** 0.5)
 
         if key_mask is not None:
             key_mask = key_mask.unsqueeze(0).unsqueeze(2)  # [1, 1, B, T_k]
